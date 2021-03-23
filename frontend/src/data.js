@@ -7,7 +7,7 @@ const data = {
             image: '/images/collar1.jpg',
             price: 50.00,
             brand: 'collar',
-            rating: 4,
+            rating: 3,
             numReviews: 4,
             description: 'Embroidered dog collar, personalized custom, name and/or phone number, 25 nylon colors, lots of thread and font choices, nylon adjustable',
 
@@ -31,7 +31,7 @@ const data = {
             image: '/images/collar1.jpg',
             price: 50.00,
             brand: 'collar',
-            rating: 4,
+            rating: 5,
             numReviews: 4,
             description: 'Embroidered dog collar, personalized custom, name and/or phone number, 25 nylon colors, lots of thread and font choices, nylon adjustable',
 
@@ -43,7 +43,7 @@ const data = {
             image: '/images/collar2.jpg',
             price: 50.00,
             brand: 'collar',
-            rating: 4,
+            rating: 5,
             numReviews: 4,
             description: 'Embroidered dog collar, personalized custom, name and/or phone number, 25 nylon colors, lots of thread and font choices, nylon adjustable',
 
@@ -55,7 +55,7 @@ const data = {
             image: '/images/collar1.jpg',
             price: 50.00,
             brand: 'collar',
-            rating: 4,
+            rating: 2.5,
             numReviews: 4,
             description: 'Embroidered dog collar, personalized custom, name and/or phone number, 25 nylon colors, lots of thread and font choices, nylon adjustable',
 
@@ -67,7 +67,7 @@ const data = {
             image: '/images/collar2.jpg',
             price: 50.00,
             brand: 'collar',
-            rating: 4,
+            rating: 4.5,
             numReviews: 4,
             description: 'Embroidered dog collar, personalized custom, name and/or phone number, 25 nylon colors, lots of thread and font choices, nylon adjustable',
 
