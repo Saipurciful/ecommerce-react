@@ -1,20 +1,22 @@
 import React from 'react'
+import { Col, Row } from 'react-bootstrap';
 import Product from '../components/Product';
 import data from '../data'
 
 const ProductScreen = () => {
     return (
-        <div className="row center">
+        <>
+            <Row>
+                {data.products.map((products) => (
 
-            {data.products.map((products) => (
+                    <Col sm={12} md={6} lg={4} xl={3}>
+                        <Product key={products._id} product={products} />
+                    </Col>
+                ))}
 
-                <Product key={products._id} product={products} />
+            </Row>
 
-            )
-
-            )}
-
-        </div>
+        </>
     )
 }
 
