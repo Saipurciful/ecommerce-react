@@ -7,15 +7,15 @@ const Product = (props) => {
     const { product } = props;
 
     return (
-        <Card className='card border-secondary my-3 p-3 rounded' style={{ height: "400px" }}>
+        <Card key={product._id} className='card border-secondary my-3 p-3 rounded'>
             <Link to={`/product/${product._id}`}>
-                <Card.Img src={product.image} variant='top' />
+                <Card.Img className="medium" src={product.image} variant='top' />
             </Link>
 
             <Card.Body>
                 <Link to={`/product/${product._id}`}>
                     <Card.Text as='div'>
-                        <h4>{product.name}</h4>
+                        <h3>{product.name}</h3>
                     </Card.Text>
                 </Link>
 

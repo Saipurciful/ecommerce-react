@@ -79,29 +79,32 @@ const ProductScreen = (props) => {
                                             </ListGroupItem>
 
                                             {product.countInStock > 0 && (
-                                                <ListGroupItem>
-                                                    <Row>
-                                                        <Col>
-                                                            Qty</Col>
-                                                        <Col>
-                                                            <FormControl as='select' value={qty} onChange={(e) => setQty(e.target.value)}> {
+                                                <>
+                                                    <ListGroupItem>
+                                                        <Row>
+                                                            <Col>
+                                                                Qty</Col>
+                                                            <Col>
+                                                                <FormControl as='select' value={qty} onChange={(e) => setQty(e.target.value)}> {
 
-                                                                [...Array(product.countInStock).keys()].map((x) => (
-                                                                    <option key={x + 1} value={x + 1}>{x + 1}</option>
+                                                                    [...Array(product.countInStock).keys()].map((x) => (
+                                                                        <option key={x + 1} value={x + 1}>{x + 1}</option>
 
 
-                                                                ))}
-                                                            </FormControl>
-                                                        </Col>
-                                                    </Row>
-                                                </ListGroupItem>
+                                                                    ))}
+                                                                </FormControl>
+                                                            </Col>
+                                                        </Row>
+                                                    </ListGroupItem>
+
+
+                                                    <ListGroup.Item>
+                                                        <Button
+                                                            onClick={addToCartHandler}
+                                                            className='btn-block'>ADD TO CART</Button>
+                                                    </ListGroup.Item>
+                                                </>
                                             )}
-
-                                            <ListGroup.Item>
-                                                <Button
-                                                    onClick={addToCartHandler}
-                                                    className='btn-block'>ADD TO CART</Button>
-                                            </ListGroup.Item>
                                         </Card>
                                     </Col>
                                 </Row>
