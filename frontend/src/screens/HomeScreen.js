@@ -24,10 +24,12 @@ const HomeScreen = () => {
                 error ? (<MessageBox variant="danger">{error}</MessageBox>
                 ) : (
                         <Row>
-                            {products.map((products) => (
+                            {products.length === 0 && <MessageBox>No Product Found</MessageBox>}
+
+                            {products.map((product) => (
 
                                 <Col sm={12} md={6} lg={4} xl={3}>
-                                    <Product key={products._id} product={products} />
+                                    <Product key={product._id} product={product} />
                                 </Col>
                             ))}
 
