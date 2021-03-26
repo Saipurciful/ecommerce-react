@@ -1,5 +1,5 @@
 import React from 'react'
-import Product from '../components/Product'
+
 import data from '../data'
 import Rating from '../components/Rating'
 import { Link } from 'react-router-dom'
@@ -16,7 +16,7 @@ const ProductScreen = (props) => {
             <Link className='btn btn-dark my-3' to='/'> Go Back</Link>
 
             <Row>
-                <Col md={6}>
+                <Col md={6} key={product._id}>
                     <Image src={product.image} alt={product.name} fluid />
                 </Col>
 
@@ -28,8 +28,8 @@ const ProductScreen = (props) => {
                         </ListGroupItem>
                         <ListGroupItem>
                             <Rating
-                                value={product.rating}
-                                text={`${product.numReviews} review`} />
+                                rating={product.rating}
+                                numReviews={product.numReviews} />
                         </ListGroupItem>
                         <ListGroupItem>
                             Price: ${product.price}
