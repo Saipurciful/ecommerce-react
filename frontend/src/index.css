@@ -3,6 +3,10 @@ body {
   padding-right: 1rem;
 }
 
+/* card */
+
+
+
 .badge {
   background-color: #f02020;
   color: #ffffff;
@@ -57,7 +61,7 @@ h3 {
 input,
 select,
 textarea {
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
   border: 0.1rem #a4a4a4 solid;
   font-size: 1.6rem;
@@ -70,4 +74,15 @@ select:hover,
 textarea:hover,
 button:hover {
   border: 0.1rem #404040 solid;
+}
+
+/* image */
+
+img.small {
+  max-width: 5rem;
+  width: 100%;
+}
+
+.min-30 {
+  min-width: 30rem;
 }

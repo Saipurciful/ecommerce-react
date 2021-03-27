@@ -7,7 +7,8 @@ const Product = (props) => {
     const { product } = props;
 
     return (
-        <Card key={product._id} className='card border-secondary my-3 p-3 rounded'>
+        <Card key={product._id} className='card border-info my-3 mb-3 p-3 rounded'>
+
             <Link to={`/product/${product._id}`}>
                 <Card.Img className="medium" src={product.image} variant='top' />
             </Link>

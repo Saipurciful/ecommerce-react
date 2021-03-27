@@ -31,7 +31,7 @@ const ProductScreen = (props) => {
                 ) : (
                         <Row>
                             <div>
-                                <Link style={{ marginLeft: "3rem" }} className='btn btn-dark my-3' to='/'> Back</Link>
+                                <Link style={{ marginLeft: "3rem" }} className='btn btn-outline-primary my-3' to='/'> Back</Link>
 
                                 <Row>
                                     <Col md={5} key={product._id}>
