@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Button, FormControl, Col, ListGroup, ListGroupItem, Row, Image, Card } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { addToCart } from '../actions/cartAction';
+import { addToCart, removeFromCart } from '../actions/cartAction';
 import MessageBox from '../components/MessageBox';
 
 const CartScreen = (props) => {
@@ -20,7 +20,7 @@ const CartScreen = (props) => {
 
     const removeFromCartHandler = (id) => {
         // delete action
-        // dispatch(removeFromCart(id));
+        dispatch(removeFromCart(id));
     };
 
     const checkoutHandler = () => {
