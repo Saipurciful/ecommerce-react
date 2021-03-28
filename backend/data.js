@@ -17,7 +17,7 @@ const data = {
     ],
     products: [
         {
-            _id: '1',
+
             name: 'Embroidery dog leash',
             category: 'dog collar',
             image: '/images/collar5.jpg',
@@ -30,7 +30,7 @@ const data = {
 
         },
         {
-            _id: '2',
+
             name: 'Embroidery dog collar 2',
             category: 'dog collar',
             image: '/images/collar6.jpg',
@@ -43,7 +43,7 @@ const data = {
 
         },
         {
-            _id: '3',
+
             name: 'Embroidery dog collar 3',
             category: 'dog Leash',
             image: '/images/collar3.jpg',
@@ -56,7 +56,7 @@ const data = {
 
         },
         {
-            _id: '4',
+
             name: 'Embroidery dog collar 4',
             category: 'Dog Leash',
             image: '/images/collar4.jpg',
@@ -69,7 +69,7 @@ const data = {
 
         },
         {
-            _id: '5',
+
             name: 'Embroidery dog collar 5',
             category: 'dog collar',
             image: '/images/collar5.jpg',
@@ -82,7 +82,8 @@ const data = {
 
         },
         {
-            _id: '6',
+
+
             name: 'Embroidery dog collar 6',
             category: 'dog collar',
             image: '/images/collar6.jpg',

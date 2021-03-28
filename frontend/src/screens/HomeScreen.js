@@ -8,6 +8,7 @@ import MessageBox from '../components/MessageBox';
 import { listProducts } from '../actions/productActions'
 
 
+
 const HomeScreen = () => {
     const dispatch = useDispatch();
     const productList = useSelector(state => state.productList);
@@ -18,22 +19,23 @@ const HomeScreen = () => {
     }, [dispatch])
     return (
         <div>
-
+            <h2>Featured Products</h2>
             {loading ? (<LoadingBox ></LoadingBox>
             ) :
                 error ? (<MessageBox variant="danger">{error}</MessageBox>
                 ) : (
+
                         <Row>
-                            {products.length === 0 && <MessageBox>No Product Found</MessageBox>}
+                            {products.length === 0 && <MessageBox >No Product Found</MessageBox>}
 
                             {products.map((product) => (
 
                                 <Col sm={12} md={6} lg={4} xl={3}>
-                                    <Product key={product._id} product={product} />
-                                </Col>
+                                    <Product key={product._id} product={product}></  Product>                              </Col>
                             ))}
 
                         </Row>
+
                     )}
 
 
