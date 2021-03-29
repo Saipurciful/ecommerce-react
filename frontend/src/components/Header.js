@@ -3,7 +3,10 @@ import { useSelector } from 'react-redux'
 import { LinkContainer } from 'react-router-bootstrap'
 import { Navbar, Nav, Container } from 'react-bootstrap'
 
+
+
 const Header = () => {
+
 
     const cart = useSelector((state) => state.cart);
     const { cartItems } = cart;
@@ -25,7 +28,7 @@ const Header = () => {
                                     <span className="badge">{cartItems.length}</span>
                                 )}</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to='/login'>
+                            <LinkContainer to='/signin' >
 
                                 <Nav.Link ><i className='fas fa-user' /> Sign In</Nav.Link>
                             </LinkContainer>
