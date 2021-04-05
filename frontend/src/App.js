@@ -4,6 +4,7 @@ import Header from './components/Header'
 
 import HomeScreen from './screens/HomeScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
+import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
 import SigninScreen from './screens/SigninScreen';
@@ -28,6 +29,7 @@ function App() {
         <Route path='/register' component={RegisterScreen} />
         <Route path='/shipping' component={ShippingAddressScreen} />
         <Route path="/payment" component={PaymentMethodScreen} />
+        <Route path="/placeorder" component={PlaceOrderScreen} />
         <Route path='/product/:id' component={ProductScreen} />
       </main>
       <footer className="row center">All right reserved</footer>
