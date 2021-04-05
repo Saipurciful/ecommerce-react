@@ -1,42 +1,60 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import { LinkContainer } from 'react-router-bootstrap'
-import { Navbar, Nav, Container } from 'react-bootstrap'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { signout } from '../actions/userActions'
+import { Link } from 'react-router-dom'
+
 
 
 
 const Header = () => {
 
-
     const cart = useSelector((state) => state.cart);
     const { cartItems } = cart;
+
+    const userSignin = useSelector((state) => state.userSignin);
+    const { userInfo } = userSignin;
+    const dispatch = useDispatch();
+    const signoutHandler = () => {
+        dispatch(signout());
+    };
+
+
+
     return (
         <header>
+            <div className="grid-container">
+                <header className="row">
 
-            <Navbar bg='primary' variant='dark' expand='lg' collapseOnSelect>
-                <Container>
-                    <LinkContainer to='/'>
-                        <Navbar.Brand>Embroidery</Navbar.Brand>
-                    </LinkContainer>
+                    <div>
+                        <Link className="brand" to="/"> Embroidery</Link>
+                    </div>
+                    <div>
+                        <Link to="/cart"><i class="fas fa-shopping-cart"></i> Cart{cartItems.length > 0 && (
 
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        {/* ml = margin left auto */}
-                        <Nav className="ml-auto">
-                            <LinkContainer to='/cart'>
-                                <Nav.Link ><i className='fas fa-shopping-cart' /> Cart {cartItems.length > 0 && (
-                                    <span className="badge">{cartItems.length}</span>
-                                )}</Nav.Link>
-                            </LinkContainer>
-                            <LinkContainer to='/signin' >
+                            <span className="badge">{cartItems.length}</span>
+                        )}
+                        </Link>
 
-                                <Nav.Link ><i className='fas fa-user' /> Sign In</Nav.Link>
-                            </LinkContainer>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-        </header >
+                        {userInfo ? (
+                            <div className="dropdown">
+                                <Link to="#">
+                                    {userInfo.name} <i className="fa fa-caret-down"></i>{' '}
+                                </Link>
+                                <ul className="dropdown-content">
+                                    <li>
+                                        <Link to="#signout" onClick={signoutHandler}>
+                                            Sign Out</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        ) : (
+                                <Link to="/signin"> <i class="fas fa-user"></i> Sign In</Link>
+                            )}
+                    </div>
+                </header>
+            </div>
+        </header>
+
     )
 }
 
