@@ -29,7 +29,7 @@ const Header = () => {
                         <Link className="brand" to="/"> Embroidery</Link>
                     </div>
                     <div>
-                        <Link to="/cart"><i class="fas fa-shopping-cart"></i> Cart{cartItems.length > 0 && (
+                        <Link to="/cart"><i className="fas fa-shopping-cart"></i> Cart{cartItems.length > 0 && (
 
                             <span className="badge">{cartItems.length}</span>
                         )}
@@ -48,7 +48,7 @@ const Header = () => {
                                 </ul>
                             </div>
                         ) : (
-                                <Link to="/signin"> <i class="fas fa-user"></i> Sign In</Link>
+                                <Link to="/signin"> <i className="fas fa-user"></i> Sign In</Link>
                             )}
                     </div>
                 </header>

@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom';
 import Header from './components/Header'
-
 import HomeScreen from './screens/HomeScreen';
+import OrderScreen from './screens/orderScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import ProductScreen from './screens/ProductScreen';
@@ -30,6 +30,7 @@ function App() {
         <Route path='/shipping' component={ShippingAddressScreen} />
         <Route path="/payment" component={PaymentMethodScreen} />
         <Route path="/placeorder" component={PlaceOrderScreen} />
+        <Route path="/order/:id" component={OrderScreen} />
         <Route path='/product/:id' component={ProductScreen} />
       </main>
       <footer className="row center">All right reserved</footer>
